@@ -1,7 +1,10 @@
 import Link from "next/link";
 import React, { useState } from "react";
-
-const NavLink = ( { slide }: { slide: boolean }) => {
+interface NavLinksProps {
+  slide: boolean;
+  handleClick: () => void;
+}
+const NavLink: React.FC<NavLinksProps> = ({slide, handleClick}) => {
   const calculatricesFolderStructure = [
     "standard",
     "scientifique",
@@ -38,7 +41,7 @@ const NavLink = ( { slide }: { slide: boolean }) => {
           <Link
             href={`/calculatrices/${folder}`}
             key={folder}
-            className="capitalize w-full h-10 flex items-center pl-3 hover:bg-neutral-400 rounded"
+            className="capitalize w-full h-10 flex items-center pl-3 hover:bg-neutral-400 rounded" onClick={() => handleClick()}
           >
             {folder}
           </Link>
@@ -51,7 +54,7 @@ const NavLink = ( { slide }: { slide: boolean }) => {
           <Link
             href={`/calculatrices/${folder}`}
             key={folder}
-            className="capitalize w-full h-10 flex items-center pl-3 hover:bg-neutral-400 rounded"
+            className="capitalize w-full h-10 flex items-center pl-3 hover:bg-neutral-400 rounded" onClick={() => handleClick()}
           >
             {folder}
           </Link>

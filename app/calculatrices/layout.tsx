@@ -29,8 +29,8 @@ export default function RootLayout({
       });
     });
   }, []);
-  const [slide, setSlide] = useState(true);
-  const handleClick = () => {
+  const [slide, setSlide] = useState(false);
+  const handleClick: () => void = () => {
     setSlide(!slide);
   };
   // getting the name from the url
@@ -43,7 +43,7 @@ export default function RootLayout({
           <p className="ml-3 w-fit text-xs">Calculatrice</p>
         </header>
         <div className="relative w-full h-full">
-        <NavLink slide={slide} />
+        <NavLink slide={slide} handleClick={handleClick}/>
           <TopBar name={name} handleClick={handleClick} />
           <div className="grow ">{children}</div>
         </div>
