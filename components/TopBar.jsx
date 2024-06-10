@@ -5,12 +5,12 @@ const TopBar = ({ name, handleClick ,clicked }) => {
       <nav className="flex items-center gap-5 h-14 pl-5 w-4/5">
         {/* creating the hamburger menu button */}
         <button
-          className={"w-9 h-8 flex flex-col gap-1 justify-center items-center rounded hover:bg-gray-200 z-10 transition " + (clicked ? "rotateN" : "")}
+          className={"w-9 h-8 flex flex-col gap-1 justify-center items-center rounded hover:bg-gray-200 z-30 transition "}
           onClick={handleClick}
         >
-          <div className="w-5 border-t border-black bg-black origin-center"></div>
-          <div className="w-5 border-t border-black bg-black origin-center"></div>
-          <div className="w-5 border-t border-black bg-black origin-center"></div>
+          <div className={"w-5 border-t border-black bg-black origin-center " + (clicked ? "rotateN" : "")}></div>
+          <div className={"w-5 border-t border-black bg-black origin-center " + (clicked ? "rotateN" : "")}></div>
+          <div className={"w-5 border-t border-black bg-black origin-center " + (clicked ? "rotateN" : "")}></div>
         </button>
         {/* creating the current calculatrice name renderer    */}
         <h1 className="font-bold text-2xl capitalize antialiased">{name}</h1>
