@@ -44,9 +44,9 @@ export default function RootLayout({
           <Image width={14} height={15} src="/logo.png" alt="logo" />
           <p className="ml-3 w-fit text-xs">Calculatrice</p>
         </header>
-        <div className="relative w-full h-full">
-        <NavLink slide={slide} handleClick={handleClick} />
-          <TopBar name={name} handleClick={handleClick} clicked={clicked}/>
+        <div className="relative w-full h-full flex flex-col">
+          <NavLink slide={slide} handleClick={handleClick} />
+          <TopBar name={name} handleClick={handleClick} clicked={clicked} />
           <div className="grow ">{children}</div>
         </div>
       </main>
