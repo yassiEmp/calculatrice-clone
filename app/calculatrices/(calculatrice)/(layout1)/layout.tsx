@@ -15,10 +15,14 @@ export default function RootLayout({
   const directory = path.split("/"); //get the current path
   const name = directory[2]; // get the name of the current calculator
   const [display, setDisplay] = useState("3");
+  const setNumber = ()=>{
+    const c: any = localStorage.getItem("display")
+    setDisplay(c)
+  }
   return (
     <>
       <section className="flex h-full">
-        <section className="h-full w-4/5 flex flex-col ">
+        <section className="h-full w-4/5 flex flex-col p-2">
           {/* Screen to display information to user */}
           <Screen display={display} />
           <Feature name={name} />

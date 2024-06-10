@@ -42,7 +42,7 @@ export default function RootLayout({
       <main className="w-full h-full flex flex-col relative">
         <header className="w-full h-2 flex items-center p-5">
           <Image width={14} height={15} src="/logo.png" alt="logo" />
-          <p className="ml-3 w-fit text-xs">Calculatrice</p>
+          <p className="ml-3 w-fit text-xs ">Calculatrice</p>
         </header>
         <div className="relative w-full h-full flex flex-col">
           <NavLink slide={slide} handleClick={handleClick} />
