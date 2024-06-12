@@ -10,14 +10,16 @@ const layout = () => {
   const [trig, setTrig] = useState(false);
   const [func, setFunc] = useState(false);
 
-  function open(par: string): void {
+  function open(par: string,b?:boolean): void {
     if (par == "trig") {
       if(func){
+        if(b){return}
         setFunc(!func)
       }
       setTrig(!trig);
     } else if (par == "func") {
       if(trig){
+        if(b){return}
         setTrig(!trig)
       }
       setFunc(!func);
@@ -72,7 +74,7 @@ const layout = () => {
                 }
               >
                 {["|x|", "⌊x⌋", "⌈x⌉", "rand", "→dms", "→deg"].map((item) => (
-                  <Button name={item} handler={open} />
+                  <Button name={item} handler={()=>{open("func",true)}} />
                 ))}
               </div>
             </div>

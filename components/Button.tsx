@@ -1,7 +1,7 @@
 import React from "react";
 interface ButtonProps {
   name: string;
-  handler: (par:string) => void;
+  handler: (par:string,b?:boolean) => void;
 }
 const Button: React.FC<ButtonProps> = ({ name, handler }) => {
   return (
