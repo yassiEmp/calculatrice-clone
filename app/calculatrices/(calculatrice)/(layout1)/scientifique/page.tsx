@@ -12,8 +12,14 @@ const layout = () => {
 
   function open(par: string): void {
     if (par == "trig") {
+      if(func){
+        setFunc(!func)
+      }
       setTrig(!trig);
     } else if (par == "func") {
+      if(trig){
+        setTrig(!trig)
+      }
       setFunc(!func);
     }
   }
@@ -34,23 +40,42 @@ const layout = () => {
                 </div>
               </div>
             </div>
-            <div className={"w-[25vw] grid grid-cols-4 h-[10vh] absolute gap-1 p-1 bg-[#ccc] rounded "+(trig?"":" hidden")}>
+            <div
+              className={
+                "w-[25vw] grid grid-cols-4 h-[10vh] absolute gap-1 p-1 bg-[#e7e7e7] rounded " +
+                (trig ? "" : " hidden")
+              }
+            >
               {["2nd", "sin", "cos", "tan", "hyp", "sec", "csc", "cot"].map(
                 (item) => (
-                  <Button name={item} handler={open}/>
+                  <Button name={item} handler={open} />
                 )
               )}
             </div>
           </div>
-          <div
-            className="flex gap-1 h-full items-center justify-center hover:bg-[rgba(0,0,0,0.1)] p-5 rounded "
-            onClick={() => open("func")}
-          >
-            <div className={lugrasimo.className + " p-2"}>
-              {/*chevron down svg */}f
+          <div>
+            <div
+              className="flex gap-1 h-full items-center justify-center hover:bg-[rgba(0,0,0,0.1)] p-5 rounded w-min"
+              onClick={() => open("func")}
+            >
+              <div className={lugrasimo.className + " p-2"}>
+                {/*chevron down svg */}f
+              </div>
+              <button>Fonction</button>
+              <BsChevronDown />
             </div>
-            <button>Fonction</button>
-            <BsChevronDown />
+            <div>
+              <div
+                className={
+                  "w-[25vw] grid grid-cols-3 h-[10vh] absolute gap-1 p-1 bg-[#e7e7e7] rounded " +
+                  (func ? "" : " hidden")
+                }
+              >
+                {["|x|", "⌊x⌋", "⌈x⌉", "rand", "→dms", "→deg"].map((item) => (
+                  <Button name={item} handler={open} />
+                ))}
+              </div>
+            </div>
           </div>
         </div>
       </div>
