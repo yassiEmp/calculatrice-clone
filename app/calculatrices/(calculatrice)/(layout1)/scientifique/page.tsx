@@ -9,7 +9,15 @@ const lugrasimo = Lugrasimo({ weight: "400", subsets: ["latin"] });
 const layout = () => {
   const [trig, setTrig] = useState(false);
   const [func, setFunc] = useState(false);
-
+  const buttons = [
+    '2nd', 'π', 'e', 'C', '⨁',
+    'x²', '¹/x', '|x|', 'exp', 'mod',
+    '²√x', '(', ')', 'n!', '÷',
+    'xʸ', '7', '8', '9', '×',
+    '10ʸ', '4', '5', '6', '−',
+    'log', '1', '2', '3', '+',
+    'ln', '+/−', '0', ',', '='
+  ];
   function open(par: string,b?:boolean): void {
     if (par == "trig") {
       if(func){
@@ -27,8 +35,8 @@ const layout = () => {
   }
   return (
     <>
-      <div className="h-50 w-full h-[60px] ">
-        <div className="flex gap-2 h-full">
+      <div className="h-full w-full flex flex-col">
+        <div className="flex gap-2 h-[60px]">
           <div>
             <div
               className="flex gap-1 h-full items-center justify-center hover:bg-[rgba(0,0,0,0.1)] p-5 rounded w-min"
@@ -79,6 +87,11 @@ const layout = () => {
               </div>
             </div>
           </div>
+        </div>
+        <div className="grow grid grid-cols-5 gap-1">
+          {buttons.map((name) => (
+            <Button key={name} name={name} />
+          ))}
         </div>
       </div>
     </>
