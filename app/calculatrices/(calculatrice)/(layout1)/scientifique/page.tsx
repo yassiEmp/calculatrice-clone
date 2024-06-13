@@ -6,7 +6,7 @@ import { Lugrasimo } from "next/font/google";
 import Button from "@/components/Button";
 
 const lugrasimo = Lugrasimo({ weight: "400", subsets: ["latin"] });
-const layout = () => {
+const Layout = () => {
   const [trig, setTrig] = useState(false);
   const [func, setFunc] = useState(false);
   const buttons = [
@@ -58,7 +58,7 @@ const layout = () => {
             >
               {["2nd", "sin", "cos", "tan", "hyp", "sec", "csc", "cot"].map(
                 (item) => (
-                  <Button name={item} handler={open} />
+                  <Button name={item} handler={open} key={item}/>
                 )
               )}
             </div>
@@ -82,7 +82,7 @@ const layout = () => {
                 }
               >
                 {["|x|", "⌊x⌋", "⌈x⌉", "rand", "→dms", "→deg"].map((item) => (
-                  <Button name={item} handler={()=>{open("func",true)}} />
+                  <Button name={item} handler={()=>{open("func",true)}} key={item}/>
                 ))}
               </div>
             </div>
@@ -98,4 +98,4 @@ const layout = () => {
   );
 };
 
-export default layout;
+export default Layout;
