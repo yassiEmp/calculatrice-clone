@@ -55,7 +55,32 @@ const Feature = ({ name }: { name: string }) => {
       );
 
     case "programmeur":
-      return <div>i am the calculator programmeur</div>;
+      return (
+        <div className="h-1/5 ">
+          <div className="h-full flex flex-col">
+          <div className="flex h-1/4 gap-2 relative pl-4 m-1 items-center hover:bg-[#5f5f5f40] rounded">
+            <div className="absolute w-1 bg-blue-500 rounded h-1/2 left-0"></div>
+            <p className="uppercase w-20">hex</p>
+            <p>56</p>
+          </div>
+          <div className="flex h-1/4 gap-2 relative pl-4 m-1 items-center hover:bg-[#5f5f5f40] rounded">
+            <div className="absolute w-1 bg-blue-500 rounded h-1/2 left-0"></div>
+            <p className="uppercase w-20">dec</p>
+            <p>2151</p>
+          </div>
+          <div className="flex h-1/4 gap-2 relative pl-4 m-1 items-center hover:bg-[#5f5f5f40] rounded">
+            <div className="absolute w-1 bg-blue-500 rounded h-1/2 left-0"></div>
+            <p className="uppercase w-20">oct</p>
+            <p>4505</p>
+          </div>
+          <div className="flex h-1/4 gap-2 relative pl-4 m-1 items-center hover:bg-[#5f5f5f40] rounded">
+            <div className="absolute w-1 bg-blue-500 rounded h-1/2 left-0"></div>
+            <p className="uppercase w-20">bin</p>
+            <p>14541</p>
+          </div>
+          </div>
+        </div>
+      )
   }
 };
 

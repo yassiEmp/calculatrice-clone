@@ -52,7 +52,7 @@ const layout = () => {
             </div>
             <div
               className={
-                "w-[25vw] grid grid-cols-4 h-[10vh] absolute gap-1 p-1 bg-[#e7e7e7] rounded " +
+                "w-[25vw] grid grid-cols-4 h-[15vh] absolute gap-1 p-1 bg-[#e7e7e7]  z-30 rounded " +
                 (trig ? "" : " hidden")
               }
             >
@@ -77,7 +77,7 @@ const layout = () => {
             <div>
               <div
                 className={
-                  "w-[25vw] grid grid-cols-3 h-[10vh] absolute gap-1 p-1 bg-[#e7e7e7] rounded " +
+                  "w-[25vw] grid grid-cols-3 h-[15vh] absolute gap-1 p-1 bg-[#e7e7e7]  z-30 rounded " +
                   (func ? "" : " hidden")
                 }
               >
