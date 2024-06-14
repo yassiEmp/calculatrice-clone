@@ -5,7 +5,7 @@ import React, { useState } from "react";
 import { BsChevronDown } from "react-icons/bs";
 import { TbLogicNor } from "react-icons/tb";
 
-const layout = () => {
+const Page = () => {
   const [boardType, setBoardType] = useState("standard");
   const [menu1, setMenu1] = useState(false);
   const [menu2, setMenu2] = useState(false);
@@ -144,4 +144,4 @@ const layout = () => {
   );
 };
 
-export default layout;
+export default Page;
