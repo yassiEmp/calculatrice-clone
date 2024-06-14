@@ -17,13 +17,13 @@ export default function RootLayout({
     elements.forEach((element) => {
       window.addEventListener("keypress", (e) => {
         if (e.key === "b") {
-          element.classList.add("border");
+          element.classList.add("borderS");
           element.style.backgroundColor = `rgba(${Math.random() * 255},${
             Math.random() * 255
           },${Math.random() * 255},${Math.random() * 255})`;
         }
         if (e.key === "r") {
-          element.classList.remove("border");
+          element.classList.remove("borderS");
           element.style.backgroundColor = "";
         }
       });
@@ -41,7 +41,7 @@ export default function RootLayout({
     <>
       <main className="w-full h-full flex flex-col relative">
         <header className="w-full h-2 flex items-center p-5">
-          <Image width={14} height={15} src="./logo.png" alt="logo" />
+          <Image width={14} height={15} src="/logo.png" alt="logo" />
           <p className="ml-3 w-fit text-xs ">Calculatrice</p>
         </header>
         <div className="relative w-full h-full flex flex-col">
