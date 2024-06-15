@@ -1,3 +1,5 @@
+//the idea is there it still some change and bug to fix but it works do not use before the bug is fixed
+
 const fs = require("fs").promises; // Use the promises API for async operations
 const path = require("path");
 const appDirectory = "./app"; // Change this to your actual directory path
