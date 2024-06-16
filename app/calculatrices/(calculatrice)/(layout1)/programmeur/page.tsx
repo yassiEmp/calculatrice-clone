@@ -54,9 +54,9 @@ const Page = () => {
   ];
   return (
     <div className="w-full h-full">
-      <div className="w-full h-[12%] flex justify-between border-b">
+      <div className="w-full h-1/6 flex justify-between border-b">
         {/* making the board type chooser */}
-        <div className="w-[18%] h-full flex gap-3 p-2">
+        <div className="w-1/6 h-full flex gap-3 p-2">
           <div className="rounded w-[50%] h-[full] flex justify-center items-center relative hover:bg-[#dedede] ">
             <button>
               <Image
@@ -69,7 +69,7 @@ const Page = () => {
             </button>
             <div className="w-5 border border-blue-500 absolute bottom-0"></div>
           </div>
-          <div className="rounded w-[50%] h-[full] flex justify-center items-center relative hover:bg-[#dedede] ">
+          <div className="rounded w-1/2 h-[full] flex justify-center items-center relative hover:bg-[#dedede] ">
             <button>
               <Image
                 src="/board2.svg"
@@ -82,20 +82,20 @@ const Page = () => {
             <div className="w-5 border border-blue-500 absolute bottom-0"></div>
           </div>
         </div>
-        <div className="w-[80px] h-full flex flex-col justify-center text-center hover:bg-[#dedede] rounded">
+        <div className="w-20 h-full flex flex-col justify-center text-center hover:bg-[#dedede] rounded">
           QWORD
         </div>
-        <div className="w-[80px] h-full flex flex-col justify-center text-center hover:bg-[#dedede] rounded">
+        <div className="w-20 h-full flex flex-col justify-center text-center hover:bg-[#dedede] rounded">
           MS
         </div>
       </div>
-      <div className="w-full h-[88%] flex justify-center items-center">
+      <div className="w-full h-5/6 flex justify-center items-center">
         {/* making the board */}
 
         {boardType == "standard" ? (
           <div className="w-full h-full flex flex-col ">
-            <div className="w-full h-[16%] flex ">
-              <div className="w-[16%] h-full">
+            <div className="w-full h-1/6 flex ">
+              <div className="w-1/6 h-full">
                 <button
                   className="flex gap-1 items-center justify-center w-full p-2 h-full hover:bg-[#dedede] rounded "
                   onClick={() => {
@@ -108,7 +108,7 @@ const Page = () => {
                 </button>
                 <div
                   className={
-                    "w-[25vw] grid grid-cols-3 h-[15vh] absolute gap-1 p-1 bg-[#e7e7e7] z-30 rounded " +
+                    "w-[25vw] grid grid-cols-3 h-[15vh] absolute gap-1 p-1 bg-[#e7e7e7] z-10 rounded " +
                     (menu1 ? "" : " hidden")
                   }
                 >
@@ -128,6 +128,64 @@ const Page = () => {
                   decallage du bit
                   <BsChevronDown />
                 </button>
+                <div
+                  className={`w-full  min-h-fit h-[32vh] bg-[#848484] z-10 absolute p-3 flex flex-col justify-around rounded ${
+                    menu2 ? "" : " hidden"
+                  }`}
+                >
+                  <div className="w-full h-fit flex items-start justify-around gap-5">
+                    <div>
+                      <input
+                        type="radio"
+                        className="w-[22px] h-[22px]"
+                        id="arith"
+                        name="movement"
+                      />
+                    </div>
+                    <label htmlFor="arith" className="grow text-xl">
+                      Décalage arithmétique
+                    </label>
+                  </div>
+                  <div className="w-full h-fit flex items-start justify-around gap-5">
+                    <div>
+                      <input
+                        type="radio"
+                        className="w-[22px] h-[22px]"
+                        id="log"
+                        name="movement"
+                      />
+                    </div>
+                    <label htmlFor="log" className="grow text-xl">
+                      Décalage logique
+                    </label>
+                  </div>
+                  <div className="w-full h-fit flex items-start justify-around gap-5">
+                    <div>
+                      <input
+                        type="radio"
+                        className="w-[22px] h-[22px]"
+                        id="par"
+                        name="movement"
+                      />
+                    </div>
+                    <label htmlFor="par" className="grow text-xl">
+                      Faire pivoter par le deplacement circulaire
+                    </label>
+                  </div>
+                  <div className="w-full h-fit flex items-start justify-around gap-5">
+                    <div>
+                      <input
+                        type="radio"
+                        className="w-[22px] h-[22px]"
+                        id="via"
+                        name="movement"
+                      />
+                    </div>
+                    <label htmlFor="via" className="grow text-xl">
+                      Faire pivoter via le deplacement circulaire de transport
+                    </label>
+                  </div>
+                </div>
               </div>
             </div>
             <div className="w-full h-full grid grid-cols-5 gap-1">
