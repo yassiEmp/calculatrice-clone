@@ -95,7 +95,7 @@ const Page = () => {
         {boardType == "standard" ? (
           <div className="w-full h-full flex flex-col ">
             <div className="w-full h-1/6 flex ">
-              <div className="w-1/6 h-full">
+              <div className="w-1/6 h-full min-w-40">
                 <button
                   className="flex gap-1 items-center justify-center w-full p-2 h-full hover:bg-[#dedede] rounded "
                   onClick={() => {
@@ -117,7 +117,7 @@ const Page = () => {
                   ))}
                 </div>
               </div>
-              <div className="w-[16%] h-full relative ">
+              <div className="w-1/6 h-full min-w-40 relative ">
                 <button
                   className="flex gap-1 items-center justify-center w-full p-2 h-full hover:bg-[#dedede] rounded "
                   onClick={() => {
@@ -129,7 +129,7 @@ const Page = () => {
                   <BsChevronDown />
                 </button>
                 <div
-                  className={`w-full  min-h-fit h-[32vh] bg-[#848484] z-10 absolute p-3 flex flex-col justify-around rounded ${
+                  className={`w-full min-w-[200] h-[38vh] bg-[#d0d0d0] z-10 absolute p-3 flex flex-col justify-around rounded overflow-y-auto overflow-hidden ${
                     menu2 ? "" : " hidden"
                   }`}
                 >
@@ -137,12 +137,12 @@ const Page = () => {
                     <div>
                       <input
                         type="radio"
-                        className="w-[22px] h-[22px]"
+                        className="w-[22px] h-[22px] selection:bg-white "
                         id="arith"
                         name="movement"
                       />
                     </div>
-                    <label htmlFor="arith" className="grow text-xl">
+                    <label htmlFor="arith" className="grow lg:text-sm ">
                       Décalage arithmétique
                     </label>
                   </div>
@@ -155,7 +155,7 @@ const Page = () => {
                         name="movement"
                       />
                     </div>
-                    <label htmlFor="log" className="grow text-xl">
+                    <label htmlFor="log" className="grow lg:text-sm ">
                       Décalage logique
                     </label>
                   </div>
@@ -168,7 +168,7 @@ const Page = () => {
                         name="movement"
                       />
                     </div>
-                    <label htmlFor="par" className="grow text-xl">
+                    <label htmlFor="par" className="grow lg:text-sm ">
                       Faire pivoter par le deplacement circulaire
                     </label>
                   </div>
@@ -181,7 +181,7 @@ const Page = () => {
                         name="movement"
                       />
                     </div>
-                    <label htmlFor="via" className="grow text-xl">
+                    <label htmlFor="via" className="grow lg:text-sm ">
                       Faire pivoter via le deplacement circulaire de transport
                     </label>
                   </div>

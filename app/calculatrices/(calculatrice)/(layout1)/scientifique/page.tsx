@@ -52,7 +52,7 @@ const Layout = () => {
             </div>
             <div
               className={
-                "w-[25vw] grid grid-cols-4 h-[15vh] absolute gap-1 p-1 bg-[#e7e7e7]  z-30 rounded " +
+                "w-[25vw] grid grid-cols-4 h-[15vh] absolute gap-1 p-1 bg-[#e7e7e7]  z-30 rounded min-h-52 min-w-80" +
                 (trig ? "" : " hidden")
               }
             >
@@ -63,7 +63,7 @@ const Layout = () => {
               )}
             </div>
           </div>
-          <div>
+          <div className="relative flex flex-col items-start">
             <div
               className="flex gap-1 h-full items-center justify-center hover:bg-[rgba(0,0,0,0.1)] p-5 rounded w-min"
               onClick={() => open("func")}
@@ -74,10 +74,10 @@ const Layout = () => {
               <button>Fonction</button>
               <BsChevronDown />
             </div>
-            <div>
+            <div className="">
               <div
                 className={
-                  "w-[25vw] grid grid-cols-3 h-[15vh] absolute gap-1 p-1 bg-[#e7e7e7]  z-30 rounded " +
+                  "w-[25vw] grid grid-cols-3 h-[15vh] absolute gap-1 p-1 bg-[#e7e7e7]  z-30 rounded min-h-52 min-w-40 " +
                   (func ? "" : " hidden")
                 }
               >

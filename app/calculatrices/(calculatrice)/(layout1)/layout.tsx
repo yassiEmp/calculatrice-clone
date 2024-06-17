@@ -21,8 +21,8 @@ export default function RootLayout({
   }
   return (
     <>
-      <section className="flex h-full">
-        <section className="h-full w-4/5 flex flex-col p-2">
+      <section className="flex h-full ">
+        <section className="h-full w-4/5 flex flex-col p-2 max-[650px]:w-full ">
           {/* Screen to display information to user */}
           <Screen display={display} />
           <Feature name={name} />
