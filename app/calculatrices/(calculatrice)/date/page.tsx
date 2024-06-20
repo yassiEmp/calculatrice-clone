@@ -19,8 +19,7 @@ const Layout = () => {
     console.log("Date2: ", Date2);
     return 
   }
-  /// remember to fix the date it must work evenn if the month or the date return 1 digit ex = 1
-  const dateString = `${new Date().getFullYear()}-0${new Date().getMonth()}-0${new Date().getDay()}`
+  const dateString = `${new Date().getFullYear()}-${(new Date().getMonth() + 1).toString().padStart(2, '0')}-${new Date().getDate().toString().padStart(2, '0')}`;
   let c= Array(999);
   const handleClick = (word: string) => {
     switch (word) {
