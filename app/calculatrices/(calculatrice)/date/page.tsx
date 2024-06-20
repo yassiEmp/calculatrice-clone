@@ -2,7 +2,7 @@
 import React, { useRef, useState } from "react";
 import { BsChevronDown } from "react-icons/bs";
 
-const layout = () => {
+const Layout = () => {
   const [type, setType] = useState("difference");
   const [clicked, setClicked] = useState(false);
   const [message,setMessage]= useState("Date identique")
@@ -122,4 +122,4 @@ const layout = () => {
   );
 };
 
-export default layout;
+export default Layout;
