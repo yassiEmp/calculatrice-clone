@@ -2,10 +2,10 @@ const TopBar = ({ name, handleClick ,clicked }) => {
   return (
     <>
       {/* creating the top bar */}
-      <nav className="flex items-center gap-5 h-8 pl-5 w-4/5">
+      <nav className="flex items-center gap-5 h-14 pl-5 w-4/5">
         {/* creating the hamburger menu button */}
         <button
-          className={"w-6 h-6 flex flex-col gap-1 justify-center items-center rounded hover:bg-gray-200 z-30 transition "}
+          className={"w-9 h-8 flex flex-col gap-1 justify-center items-center rounded hover:bg-gray-200 z-30 transition "}
           onClick={handleClick}
         >
           <div className={"w-5 border-t border-black bg-black origin-center " + (clicked ? "rotateN" : "")}></div>
