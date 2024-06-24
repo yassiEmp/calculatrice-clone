@@ -40,7 +40,7 @@ export default function RootLayout({
   return (
     <>
       <main className="w-full h-full flex flex-col relative">
-        <header className="w-full h-2 flex items-center p-5">
+        <header className="w-full flex items-center p-1">
           <Image width={14} height={15} src="/logo.png" alt="logo" />
           <p className="ml-3 w-fit text-xs ">Calculatrice</p>
         </header>

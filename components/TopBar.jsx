@@ -2,10 +2,10 @@ const TopBar = ({ name, handleClick ,clicked }) => {
   return (
     <>
       {/* creating the top bar */}
-      <nav className="flex items-center gap-5 h-14 pl-5 w-4/5">
+      <nav className="flex items-center gap-5 h-8 pl-5 w-4/5">
         {/* creating the hamburger menu button */}
         <button
-          className={"w-9 h-8 flex flex-col gap-1 justify-center items-center rounded hover:bg-gray-200 z-30 transition "}
+          className={"w-6 h-6 flex flex-col gap-1 justify-center items-center rounded hover:bg-gray-200 z-30 transition "}
           onClick={handleClick}
         >
           <div className={"w-5 border-t border-black bg-black origin-center " + (clicked ? "rotateN" : "")}></div>
@@ -13,7 +13,7 @@ const TopBar = ({ name, handleClick ,clicked }) => {
           <div className={"w-5 border-t border-black bg-black origin-center " + (clicked ? "rotateN" : "")}></div>
         </button>
         {/* creating the current calculatrice name renderer    */}
-        <h1 className="font-bold text-2xl capitalize antialiased">{name}</h1>
+        <h1 className="font-bold text-2xs capitalize antialiased">{name}</h1>
         {/* import an svg home icon */}
         <button className="w-7 h-auto p-1 rounded hover:bg-gray-200 ">
           {/* FIXING THE SVG ISSUE TO MATH WITH JSX SVG CODE */}

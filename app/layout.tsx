@@ -15,9 +15,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={`${inter.className} w-full h-full bg-neutral-100 lg:text-2xs `}>
+    <html lang="en" className={`${inter.className} w-full h-full bg-neutral-100 `}>
       <body className={`${inter.className} w-full h-full `}>{children}</body>
-      <SpeedInsights />
     </html>
   );
 }

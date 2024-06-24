@@ -7,7 +7,7 @@ body,html{
 }
 
 *{
-  box-sizing: border-box;
+  /* box-sizing: border-box; */
   padding: 0;
   margin: 0;
 }
@@ -17,4 +17,19 @@ body,html{
 .rotateN{
   transition: transform 0.5s;
   transform: rotateY(180deg);
+}
+@media (min-width:450px) {
+  body,html{
+    font-size: 16px;
+  }
+}
+@media (min-width:550px) {
+  body,html{
+    font-size: 20px;
+  }
+}
+@media (max-width:350px) {
+  body,html{
+    font-size: 12px;
+  }
 }

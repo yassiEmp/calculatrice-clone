@@ -53,11 +53,11 @@ const Page = () => {
     "=",
   ];
   return (
-    <div className="w-full h-full">
-      <div className="w-full h-1/6 flex justify-between border-b">
+    <div className="w-full h-full flex flex-col ">
+      <div className="w-full h-1/6 flex justify-between border-b ">
         {/* making the board type chooser */}
-        <div className="w-1/6 h-full flex gap-3 p-2">
-          <div className="rounded w-[50%] h-[full] flex justify-center items-center relative hover:bg-[#dedede] ">
+        <div className="w-1/6 h-full flex gap-3 p-2 ">
+          <div className="rounded w-[50%] h-[full] flex justify-center items-center relative hover:bg-[#dedede] min-h-7 ">
             <button>
               <Image
                 src="/board.svg"
@@ -69,7 +69,7 @@ const Page = () => {
             </button>
             <div className="w-5 border border-blue-500 absolute bottom-0"></div>
           </div>
-          <div className="rounded w-1/2 h-[full] flex justify-center items-center relative hover:bg-[#dedede] ">
+          <div className="rounded w-1/2 h-[full] flex justify-center items-center relative hover:bg-[#dedede] min-h-7 ">
             <button>
               <Image
                 src="/board2.svg"
@@ -82,20 +82,20 @@ const Page = () => {
             <div className="w-5 border border-blue-500 absolute bottom-0"></div>
           </div>
         </div>
-        <div className="w-20 h-full flex flex-col justify-center text-center hover:bg-[#dedede] rounded">
+        <p className="w-20 flex flex-col text-xs justify-center text-center hover:bg-[#dedede] rounded">
           QWORD
-        </div>
-        <div className="w-20 h-full flex flex-col justify-center text-center hover:bg-[#dedede] rounded">
+        </p>
+        <p className="w-20 flex flex-col text-xs justify-center text-center hover:bg-[#dedede] rounded">
           MS
-        </div>
+        </p>
       </div>
-      <div className="w-full h-5/6 flex justify-center items-center">
+      <div className="w-full grow flex justify-center items-center">
         {/* making the board */}
 
         {boardType == "standard" ? (
           <div className="w-full h-full flex flex-col ">
             <div className="w-full h-1/6 flex ">
-              <div className="w-1/6 h-full min-w-40">
+              <div className="w-1/6 h-full min-w-40 min-h-12">
                 <button
                   className="flex gap-1 items-center justify-center w-full p-2 h-full hover:bg-[#dedede] rounded "
                   onClick={() => {
@@ -103,12 +103,12 @@ const Page = () => {
                   }}
                 >
                   <TbLogicNor />
-                  Au niveau du bit
+                  <p className="h-full text-nowrap flex justify-center items-center text-xs">Au niveau du bit</p>
                   <BsChevronDown />
                 </button>
                 <div
                   className={
-                    "w-[25vw] grid grid-cols-3 h-[15vh] absolute gap-1 p-1 bg-[#e7e7e7] z-10 rounded " +
+                    "w-[25vw] grid grid-cols-3 h-[15vh] absolute gap-1 p-1 bg-[#e7e7e7] z-10 rounded min-w-[200px] min-h-[150px]" +
                     (menu1 ? "" : " hidden")
                   }
                 >
@@ -117,7 +117,7 @@ const Page = () => {
                   ))}
                 </div>
               </div>
-              <div className="w-1/6 h-full min-w-40 relative ">
+              <div className="w-1/6 h-full min-w-44 relative ">
                 <button
                   className="flex gap-1 items-center justify-center w-full p-2 h-full hover:bg-[#dedede] rounded "
                   onClick={() => {
@@ -125,7 +125,7 @@ const Page = () => {
                   }}
                 >
                   <TbLogicNor />
-                  decallage du bit
+                  <p className="h-full text-nowrap flex justify-center items-center text-xs">decallage du bit</p>
                   <BsChevronDown />
                 </button>
                 <div
@@ -188,7 +188,7 @@ const Page = () => {
                 </div>
               </div>
             </div>
-            <div className="w-full h-full grid grid-cols-5 gap-1">
+            <div className="w-full h-full grid grid-cols-5 gap-1 min-w-72 min-h-64 ">
               {buttonsStandard.map((name) => (
                 <Button key={name} name={name} />
               ))}

@@ -7,7 +7,7 @@ const Screen = ({ display }: { display: string }) => {
       {/* CREATING A P TAG TO DISPLAY THE CURRENT OPERATION */}
       <p className="h-6 text-xs text-right text-gray-400 p-4">{ongoingOperation}</p>
       {/* CREATING A P TAG TO DISPLAY THE CURRENT RESULT */}
-      <input className="text-right text-6xl bg-transparent w-full lg:text-8xl min-[100px]:text-xl" value={display} readOnly />
+      <input className="text-right text-5xl bg-transparent p-2" value={display} readOnly />
     </section>
   );
 };
