@@ -1,6 +1,6 @@
 import React from 'react'
     
-    const layout = () => {
+    const Layout = () => {
       return (
         <div>
           i am the calculator devise
@@ -8,4 +8,4 @@ import React from 'react'
       )
     }
     
-    export default layout
+    export default Layout
