@@ -55,7 +55,7 @@ const Layout = () => {
           className={`w-full text-left h-7 relative flex items-center p-2 hover:bg-[#e0e0e0] rounded justify-between ${!clicked&&type=="operation" ? "hidden" : ""}`}
         >{clicked&&type!=="operation"?
           <div className="absolute h-1/2 w-1 bg-blue-900 left-0 rounded "></div>:<></>}
-          Difference entre les dates
+          <p className="text-nowrap w-1/4 text-xs">Difference entre les dates</p>
           <BsChevronDown />
         </button>
         <button
@@ -64,7 +64,7 @@ const Layout = () => {
             !clicked&&type!=="operation" ? "hidden" : ""} `}
         >{clicked&&type=="operation"?
           <div className="absolute h-1/2 w-1 bg-blue-900 left-0 rounded "></div>:<></>}
-          Ajouter ou soustraire des jours
+          <p className="text-nowrap w-1/4 text-xs">Ajouter ou soustraire des jours</p>
           <BsChevronDown />
         </button>
       </div>
