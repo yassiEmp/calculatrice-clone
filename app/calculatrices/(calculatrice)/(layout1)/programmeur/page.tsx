@@ -60,7 +60,7 @@ const Page = () => {
           <div className="rounded w-[50%] h-[full] flex justify-center items-center relative hover:bg-[#dedede] min-h-7 ">
             <button>
               <Image
-                src="./board.svg"
+                src="@/board.svg"
                 width={16}
                 height={22}
                 alt=""
@@ -72,7 +72,7 @@ const Page = () => {
           <div className="rounded w-1/2 h-[full] flex justify-center items-center relative hover:bg-[#dedede] min-h-7 ">
             <button>
               <Image
-                src="./board2.svg"
+                src="@/board2.svg"
                 width={16}
                 height={16}
                 alt=""
